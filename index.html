@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwBuilder - PenguinMod Extension Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🐧 SwBuilder</div>
+        <p>Generate native JavaScript extensions for PenguinMod</p>
+    </header>
+    
+    <main class="app-container">
+        <!-- Left Panel: Configurations -->
+        <section class="panel panel-config">
+            <h2>1. Extension Metadata</h2>
+            <div class="input-group">
+                <label for="extName">Extension Name</label>
+                <input type="text" id="extName" placeholder="My Awesome Pack" value="My Awesome Pack">
+            </div>
+            <div class="input-group">
+                <label for="extID">Extension ID (No spaces)</label>
+                <input type="text" id="extID" placeholder="myAwesomePack" value="myAwesomePack">
+            </div>
+            <div class="input-group">
+                <label for="blockText">Block Display Text</label>
+                <input type="text" id="blockText" placeholder="hello [NAME]" value="hello [NAME]">
+                <small>Use [ARG] syntax to create parameter inputs.</small>
+            </div>
+            
+            <div class="actions">
+                <button id="generateBtn" class="btn btn-primary">Generate Code</button>
+                <button id="downloadBtn" class="btn btn-secondary">Download .js File</button>
+            </div>
+        </section>
+
+        <!-- Right Panel: Code Preview Output -->
+        <section class="panel panel-preview">
+            <h2>2. Generated JavaScript Code</h2>
+            <div class="textarea-wrapper">
+                <textarea id="codeOutput" readonly placeholder="Your extension code will update here..."></textarea>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
